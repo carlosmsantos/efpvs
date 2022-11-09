@@ -1,0 +1,17 @@
+version: '3'
+services:
+  wordpress:
+#    image: wordpress:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment: 
+      WORDPRESS_DB_HOST: db-mysql-nyc3-26851-do-user-307760-0.b.db.ondigitalocean.com:25060
+      WORDPRESS_DB_USER: uservicariato
+      WORDPRESS_DB_PASSWORD: AVNS_Hz7Tfq1pqaPMZfJHNo5
+      WORDPRESS_DB_NAME: BDVicariato
+    volumes:
+      - ./wp-app:/var/www/html
+    ports: 
+      - "8006:80"
+    restart: always
