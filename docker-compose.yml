@@ -1,7 +1,7 @@
 version: '3'
 services:
   wordpress:
-#   image: wordpress:latest
+# image: wordpress:latest
     build:
       context: .
       dockerfile: ./Dockerfile
